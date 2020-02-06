@@ -2,4 +2,28 @@
 layout: default
 ---
 
-{{ content }}
+<article class="container">
+    <div class="row">
+        <div class="col">
+            <div class="jumbotron">
+                <img src="{{ page.image }}" alt="post header image" />
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="col">
+            <h1>{{ page.title }}</h1>
+            <div class="text-muted">{{ page.date }}</div>
+            <div class="text-muted mb-4">{{ page.author }}</div>
+            {{ content }}    
+        </div>
+    </div>
+</article>
+
+<section id="author">
+    Author Info
+</section>
+
+<section id="comments">
+    {% include comments.html %}
+</section>
